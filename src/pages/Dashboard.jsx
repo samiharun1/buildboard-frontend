@@ -1,16 +1,17 @@
+import React from 'react';
 
-import "../index.css";
+import PulseDashboard from '../components/PulseDashboard';
+import TeamPulse from '../components/TeamPulse';
 
 
-export default function Dashboard(){
+const Dashboard = () => {
+  return (
+    <div>
+   
+      <PulseDashboard />
+      <TeamPulse />
+    </div>
+  );
+};
 
-
-  return(
-    <>
-   <div className= "page-container">
-    <h1>Dashboard</h1>
-  </div>
-    </>
-  )
-
-}
+export default Dashboard;

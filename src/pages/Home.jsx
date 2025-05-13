@@ -1,13 +1,26 @@
 import "../index.css";
+import React from 'react';
+import HeroSection from '../components/HeroSection';
+import WhyChoose from '../components/WhyChoose';
+import FeaturesGrid from '../components/FeaturesGrid';
+import HowItWorks from '../components/HowItWorks';
+import CallToAction from '../components/CallToAction';
 
-export default function Home(){
-  return(
-    <>
-    <div className="page-container">
-    <h1 className ="logo">Home Page</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima alias deserunt, dolor illo dolorem esse nisi numquam, repudiandae dicta consequatur quae velit recusandae veniam quam accusamus, voluptatibus placeat illum aliquam.</p>
-    </div>
-    </>
-  )
 
-}
+      
+    const Home = () => {
+      return (
+        <div>
+          <HeroSection />
+          {/* Här kommer nästa sektioner senare */}
+          <WhyChoose />
+          <FeaturesGrid />
+          {<HowItWorks /> }
+          {<CallToAction />}
+        </div>
+      );
+    };
+    
+    export default Home;
+    
+
