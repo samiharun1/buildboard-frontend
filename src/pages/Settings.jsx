@@ -1,16 +1,21 @@
-
+import { useState } from "react";
 import "../index.css";
+import ProfileSettings from "../components/ProfileSettings";
+import SettingsHeader from "../components/SettingsHeader";
+import AccountSettings from "../components/AccountSettings";
+import SettingsTabs from "../components/SettingsTabs";
 
+const Settings = () => {
+  const [activeTab, setActiveTab] = useState("Profile");
 
-export default function Settings(){
-
-
-  return(
-    <>
-   <div className= "page-container">
-    <h1>Settings</h1>
+  return (
+    <div className="settings-page">
+      <SettingsHeader />
+      <SettingsTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      {activeTab === "Profile" && <ProfileSettings />}
+      {activeTab === "Account" && <AccountSettings />}
     </div>
-    </>
-  )
+  );
+};
 
-}
+export default Settings;

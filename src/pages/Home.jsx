@@ -12,7 +12,7 @@ import CallToAction from '../components/CallToAction';
       return (
         <div>
           <HeroSection />
-          {/* Här kommer nästa sektioner senare */}
+          
           <WhyChoose />
           <FeaturesGrid />
           {<HowItWorks /> }
